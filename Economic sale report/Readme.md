@@ -1,6 +1,6 @@
 # 🛒 E-Commerce Sales Analysis Dashboard (Power BI)
 
-![Dashboard Preview](sandbox:/mnt/data/Ecom%20Dashboard.png)
+![Dashboard Preview](https://github.com/sreekanth-ai/Data-analytics-projects/blob/main/Economic%20sale%20report/Ecom%20Dashboard.png)
 
 ---
 
