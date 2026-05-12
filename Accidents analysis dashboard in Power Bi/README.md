@@ -1,62 +1,129 @@
-# PBI-Road-Acccident-Analysis
+# 🚧 Road Accident Analysis Dashboard (Power BI)
 
 ![Dashboard Image](https://github.com/IsaacMwendwa/PBI-Road-Accident-Analysis/blob/main/Final%20Dashboard%20Image.PNG "Final Dashboard Image")
 
-## Table of Contents
-* [Introduction](#Introduction)
-* [Dashboard Requirements](#Dashboard-Requirements)
-* [Installation / Usage](#Installation--Usage)
-* [DAX Formulas Used in Measures](#DAX-Formulas-Used-in-Measures)
-* [Bug / Feature Request](#Bug--Feature-Request)
-  
-## Introduction
-* This project is aimed at developing a Power BI Dashboard for generating insights about road accident data in the United Kingdom.
-  
-## Dashboard Requirements
-* Primary KPI's - Total Casualties and Total Accident values for Current Year and YoY Growth
-* Primary KPI's - Total Casualties by Accident Severity for Current Year and YoY Growth
-* Secondary KPI's - Total Casualties with respect to Vehicle Type for Current Year
-* Monthly Trend showing comparison of Casualties for Current Year and Previous Year
-* Casualties by Road Type for Current Year
-* Current Year Casualties by Area/Location & Day/Night
-* Total Casualties and Total Accident by Location
+## 📌 Overview
 
-## Installation / Usage
-* Install Power BI Desktop from Official [Power BI Download Site](https://powerbi.microsoft.com/en-us/downloads/)
-* Download data files from link given in Introduction
-* Clone/download this repository to your local machine
-* Open Dashboard report file (Road Accidents Dashboard.pbix) in Power BI Desktop, to access the dashboard's interactivity 
+This project presents an interactive **Power BI Dashboard** built to analyze road accident data in the United Kingdom.
+The goal is to identify accident trends, casualty patterns, and key risk factors to support data-driven decision making for road safety improvements.
 
-## DAX Formulas Used in Measures
+---
 
-**1. Total Casualties For Current Year and Year on Year Growth**
+## 🎯 Objectives
 
-(a) Current Year To Date Casualties -- CY Casualties Measure
-* `CY Casualties = TOTALYTD(SUM(Data[Number_of_Casualties]), 'Calendar'[Date])`
+* Analyze total accidents and casualties over time
+* Compare current year vs previous year performance
+* Identify accident severity distribution
+* Understand impact of vehicle type, road type, and location
+* Study monthly trends and seasonal patterns
 
-(b) Previous Year Casualties -- PY Casualties Measure
-* `PY Casualties = CALCULATE(SUM(Data[Number_of_Casualties]), SAMEPERIODLASTYEAR('Calendar'[Date]))`
+---
 
-(c) Year on Year Growth of Casualties - YoY Casualties Measure
-* `YoY Casualties = ([CY Casualties] - [PY Casualties])/[PY Casualties]`
+## 📊 Key Dashboard Features
 
-**2. Total Accidents for Current Year and Year on Year Growth**
+### 🔹 Primary KPIs
 
-(a) Current Year Accidents Count -- CY Accidents Count Measure
-*  `CY Accidents Count = TOTALYTD(COUNT(Data[Accident_Index]), 'Calendar'[Date])`
+* Total Casualties (Current Year vs Previous Year)
+* Total Accidents (Current Year vs Previous Year)
+* Year-on-Year (YoY) Growth in casualties and accidents
 
-(b) Previous Year Accidents Count -- PY Accidents Count Measure
-* `PY Accidents Count = CALCULATE(COUNT(Data[Accident_Index]), SAMEPERIODLASTYEAR('Calendar'[Date]))`
+### 🔹 Secondary KPIs
 
-(c) Year on Year Growth of Accidents - YoY Accidents Measure
-* `YoY Accidents = ([CY Accidents Count]-[PY Accidents Count])/[PY Accidents Count]`
+* Casualties by Vehicle Type
+* Casualties by Road Type
+* Casualties by Area (Urban/Rural)
+* Day vs Night accident analysis
 
-## Bug / Feature Request
-If you find a bug (the dashboard gave undesired results), kindly open an issue [here](https://github.com/IsaacMwendwa/Power-BI-Road-Accidents-Analysis-Dashboard/issues/new) by including your search query and the expected result.
+### 🔹 Trend Analysis
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/IsaacMwendwa/Power-BI-Road-Accidents-Analysis-Dashboard/issues/new). Please include sample queries and their corresponding results.
+* Monthly trend comparison (Current Year vs Previous Year)
 
+---
 
+## 🧮 DAX Measures Used
+
+### 1. Casualties Analysis
+
+**Current Year Casualties**
+
+```DAX
+CY Casualties = TOTALYTD(SUM(Data[Number_of_Casualties]), 'Calendar'[Date])
+```
+
+**Previous Year Casualties**
+
+```DAX
+PY Casualties = CALCULATE(SUM(Data[Number_of_Casualties]), SAMEPERIODLASTYEAR('Calendar'[Date]))
+```
+
+**YoY Growth**
+
+```DAX
+YoY Casualties = ([CY Casualties] - [PY Casualties]) / [PY Casualties]
+```
+
+---
+
+### 2. Accident Analysis
+
+**Current Year Accidents**
+
+```DAX
+CY Accidents = TOTALYTD(COUNT(Data[Accident_Index]), 'Calendar'[Date])
+```
+
+**Previous Year Accidents**
+
+```DAX
+PY Accidents = CALCULATE(COUNT(Data[Accident_Index]), SAMEPERIODLASTYEAR('Calendar'[Date]))
+```
+
+**YoY Growth**
+
+```DAX
+YoY Accidents = ([CY Accidents] - [PY Accidents]) / [PY Accidents]
+```
+
+---
+
+## 🛠 Tools Used
+
+* Power BI Desktop
+* DAX (Data Analysis Expressions)
+* Data Modeling
+* Excel / CSV Dataset
+
+---
+
+## 🚀 How to Use
+
+1. Download Power BI Desktop
+2. Clone this repository
+3. Open `.pbix` file in Power BI
+4. Explore interactive dashboard filters and insights
+
+---
+
+## 🐞 Issues & Improvements
+
+If you find any issue or want to suggest improvements:
+
+* Open an issue in this repository [here](https://github.com/IsaacMwendwa/Power-BI-Road-Accidents-Analysis-Dashboard/issues/new)
+* Provide details of the expected vs actual result
+
+---
+
+## 💡 What makes this project strong (for resume)
+
+This project demonstrates:
+
+* Data cleaning & modeling
+* Advanced DAX calculations
+* KPI design thinking
+* Business insight generation
+* Interactive dashboard development
+
+---
 
 
 
