@@ -8,7 +8,6 @@
 * [Installation / Usage](#Installation--Usage)
 * [DAX Formulas Used in Measures](#DAX-Formulas-Used-in-Measures)
 * [Bug / Feature Request](#Bug--Feature-Request)
-* [Authors](#Authors)
   
 ## Introduction
 * This project is aimed at developing a Power BI Dashboard for generating insights about road accident data in the United Kingdom.
@@ -58,10 +57,6 @@ If you find a bug (the dashboard gave undesired results), kindly open an issue [
 
 If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/IsaacMwendwa/Power-BI-Road-Accidents-Analysis-Dashboard/issues/new). Please include sample queries and their corresponding results.
 
-## Authors
-* **[Isaac Mwendwa](https://github.com/IsaacMwendwa)**
-    
-[![github follow](https://img.shields.io/github/followers/IsaacMwendwa?label=Follow_on_GitHub)](https://github.com/IsaacMwendwa)
 
 
 
